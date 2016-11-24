@@ -1,0 +1,11 @@
+{
+  "name": "meteor_boilerplate",
+  "private": true,
+  "description": "Meteor boilerplate for applications using blaze",
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0"
+  }
+}
