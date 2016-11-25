@@ -1,0 +1,17 @@
+<body>
+  <div class="container">
+    <header>
+      <h1>Watch Machines</h1>
+    </header>
+
+    <ul>
+      {{#each tools}}
+        {{> tool}}
+      {{/each}}
+    </ul>
+  </div>
+</body>
+
+<template name="tool">
+  <li>{{name}}</li>
+</template>
