@@ -1,17 +1,40 @@
-<body>
+<body class="">
   <div class="container">
     <header>
-      <h1>Watch Machines</h1>
+      <h1 class="col-md-12 centered">Watch Machines</h1>
     </header>
 
-    <ul>
-      {{#each tools}}
-        {{> tool}}
-      {{/each}}
-    </ul>
+    <form class="new-goal row">
+      <input type="number" name="text" class="col-md-8" placeholder="Type to set new product goal"/>
+      <select class="col-md-6" name="productFilterSelect">
+        {{#each tools}}
+          {{> tool}}
+        {{/each}}
+      </select>
+      <select class="col-md-6" name="productSelect">
+        {{#each products}}
+          {{> product}}
+        {{/each}}
+      </select>
+    </form>
+
+    <div class="row">
+      <ul class="">
+        {{#each tools}}
+          {{> toolCount}}
+        {{/each}}
+      </ul>
+    </div>
+
+    {{> productionGraph}}
   </div>
 </body>
 
+
 <template name="tool">
-  <li>{{name}}</li>
+    <option value = "{{name}}" >{{name}}</option>
+</template>
+
+<template name="product">
+    <option value = "{{name}}">{{name}}</option>
 </template>
