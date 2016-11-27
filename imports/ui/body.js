@@ -12,7 +12,7 @@ import './productionGraph.js';
 
 Template.body.onCreated(function bodyOnCreated() {
   this.state = new ReactiveDict();
-});
+  });
 
 Template.body.helpers({
   tools() {
@@ -31,10 +31,10 @@ Template.body.events({
     const target = event.target;
     const amount = target.text.value;
     const product = target.productSelect.value
-    const machine = target.toolSelect.value;
+    const tool = target.toolSelect.value;
 
     // Insert a task into the collection
-    Meteorcall('goals.insert', amount,  product, machine);
+    Meteorcall('goals.insert', amount,  product, tool);
     target.text.value = '';
     target.productSelect.value = '';
 

@@ -5,15 +5,17 @@ import { check } from 'meteor/check';
 export const Goals = new Mongo.Collection('goals');
 
 Meteor.methods({
-  'goals.insert'(_amount, _item, _machine){
+  'goals.insert'(_price, _amount, _product, _tool){
+    check(_price, Number);
     check(_amount, Number);
-    check(_item, String);
-    check(_machine, String);
+    check(_product, String);
+    check(_tool, String);
 
     Goals.insert({
+      price: _price,
       amount: _amount,
-      item: _item,
-      machine: _machine,
+      product: _product,
+      tool: _tool,
       createdAt: new Date()
     });
   },
