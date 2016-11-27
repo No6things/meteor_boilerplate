@@ -21,9 +21,6 @@ Template.body.helpers({
   products() {
     return Products.find({});
   },
-  users() {
-    return Users.find({});
-  },
 });
 
 Template.body.events({

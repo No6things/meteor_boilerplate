@@ -9,7 +9,7 @@ Meteor.methods({
     check(_amount, Number);
     check(_item, String);
     check(_machine, String);
-    
+
     Goals.insert({
       amount: _amount,
       item: _item,
